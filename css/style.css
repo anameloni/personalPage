@@ -1,0 +1,46 @@
+/* body defines everytihng is on users site area*/
+body{
+  
+  background-image: url('../images/Leia2.jpg');
+  background-size: auto 100vh;
+  font-family: monospace;
+  height: 100vh;
+}
+
+
+/*a defines the links*/
+a{
+  text-decoration: none; /*This comand take the underline (and other text formats) off the text*/
+  
+}
+
+/*Pseudoclass: CSS declares it and the developer uses. Hover makes change when the mouse pass on it.*/
+a:hover{
+  text-decoration: underline; /*This comand underline the <a> content when mouse pass on it*/
+}
+
+/*Change the title and subtitle*/
+.site-subtitle,
+.site-title{
+  color: rgb(247, 247, 247);
+  text-align: center;
+}
+
+/*To call an elent whitch has a class, we use "."+<class name>*/
+/*All elements of this class is afected by this scope*/
+.menu{
+  background-color: rgb(255, 254, 254);
+}
+
+/*This comand changes all the <ul>'s content */
+.menu ul{
+  display: flex; /*comand to make the text be horizontaly aligned*/
+  justify-content: space-around; /*This comand centralize de spaces between the text, and it only works together with display*/
+}
+
+/*This comand changes all the <li> inside elemenst which has the class menu, taking off the "." after lists*/
+.menu li{
+  list-style: none;
+  text-decoration-color: seashell;
+  text-shadow: inherit;
+}
