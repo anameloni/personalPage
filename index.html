@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ana Meloni</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bd37a6a910.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -14,11 +17,69 @@
                 <li><a href="#">Resume</a></li>
                 <li><a href="#">Contacts</a></li>
                 <li><a href="#">Cats</a></li>
-
             </ul>
         </nav>
-        <h1 class="site-title">Ana Luiza Meloni Dias</h1>
-        <h2 class = "site-subtitle">Jr. Frontend Developer</h2>
+        <div class="titles"></div> <!--Selectos inserted to centralize title and subtitle together-->
+            <h1 class="site-title">ANA LUIZA MELONI DIAS</h1>
+            <h2 class = "site-subtitle">Front end developer for any complexity</h2>
+        </div>
     </header>
+
+    <section class="hello">
+      <h2>Hello and welcome to my page!</h2>
+      <div class="grid">
+        <figure>
+          <img class="img-hello" src="./images/caricature.jpg" alt="caricature">
+        </figure>      
+      </div>
+    </section>
+    
+    <section class="portifolio">
+        <h2>Games</h2>
+        <div class="grid">
+          <figure>
+            <img class="img-portfolio" src="./images/Alvo.png" alt="Alvo">
+            <figcaption>Acerte o alvo!</figcaption>
+          </figure>
+          <figure>
+            <img class="img-portfolio" src="./images/Freeway.jpg" alt=">Freeway">
+            <figcaption>Freeway</figcaption>
+          </figure>
+          <!--<figure>
+            <img class="img-portfolio" src="./images/cat_icon.jpg" alt="Cats">
+            <figcaption>Cats</figcaption>
+          </figure>-->
+          <figure>
+            <img class="img-portfolio" src="./images/bolo.jpg" alt="Projetos pessoais">
+            <figcaption>Projetos pessoais</figcaption>
+          </figure>
+        </div>
+      </section>
+      
+      <section id = "contato" class="contato">
+        <h2>Contato</h2>
+        <div class="grid icons">
+          <a target="_blank" href="https://github.com/anameloni">
+            <i class="fab fa-github"></i>
+          </a>
+          <a target="_blank" href="https://bitbucket.org/AnaMeloni">
+            <i class="fab fa-bitbucket"></i>
+          </a>
+          <a target="_blank" href="https://linkedin.com/in/vanessametonini">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a target="_blank" href="https://www.instagram.com/annystradlin/">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a target="_blank" href="https://www.facebook.com/analuiza.meloni">
+            <i class="fab fa-facebook"></i>
+          </a>
+
+          <a href="mailto:analuizameloni@gmail.com">
+            <i class="far fa-envelope-open"></i>
+          </a>
+        </div>
+      </section>
+
 </body>
 </html>

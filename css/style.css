@@ -1,35 +1,36 @@
+/*This selctor aplies to all site. It works as a soft resete of the CSS*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* body defines everytihng is on users site area*/
 body{
-  
-  background-image: url('../images/Leia2.jpg');
-  background-size: auto 100vh;
-  font-family: monospace;
-  height: 100vh;
+  background-image: url('../Dark_img/dar_carbon.jpg');
+  background-position: center;
+  /*background-repeat: no-repeat;*/
+  background-size: 100%;
+  color: rgb(223, 99, 99);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  transform: translateY(30px);
 }
 
-
-/*a defines the links*/
-a{
-  text-decoration: none; /*This comand take the underline (and other text formats) off the text*/
-  
-}
-
-/*Pseudoclass: CSS declares it and the developer uses. Hover makes change when the mouse pass on it.*/
-a:hover{
-  text-decoration: underline; /*This comand underline the <a> content when mouse pass on it*/
-}
-
-/*Change the title and subtitle*/
-.site-subtitle,
-.site-title{
-  color: rgb(247, 247, 247);
-  text-align: center;
+header{
+  height: 77vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*To call an elent whitch has a class, we use "."+<class name>*/
 /*All elements of this class is afected by this scope*/
 .menu{
-  background-color: rgb(255, 254, 254);
+  background-color: rgba(20, 20, 20, 0.678);
+  position: fixed;
+  width: 50%;
+  top:0;
 }
 
 /*This comand changes all the <ul>'s content */
@@ -41,6 +42,265 @@ a:hover{
 /*This comand changes all the <li> inside elemenst which has the class menu, taking off the "." after lists*/
 .menu li{
   list-style: none;
-  text-decoration-color: seashell;
-  text-shadow: inherit;
+}
+
+/*This comand will change de menu topics*/
+.menu a{
+  display: block;
+  padding: 10px 10px;
+  transition: background-color 1s, color 1s ;
+}
+
+.menu a:active,
+.menu a:hover{
+  background-color: rgb(223, 99, 99);
+  color: black;  
+}
+/*a defines the links*/
+a{
+  /*color: rgb(206, 60, 60);*/
+  color: rgb(223, 99, 99);
+  font-size: 1.5em;
+  text-decoration: none; /*This comand take the underline (and other text formats) off the text*/
+}
+
+/*Pseudoclass: CSS declares it and the developer uses. Hover makes change when the mouse pass on it.*/
+a:hover{
+  text-decoration: underline; /*This comand underline the <a> content when mouse pass on it*/
+}
+
+.title{
+  border: 20px dashed rgb(255, 255, 255);
+  display: grid;
+  height: 300px;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows: auto;
+
+
+  transform: scale(0.2) translateY(30px);
+  
+}
+
+/*Change the title and subtitle*/
+.site-subtitle,
+.site-title{
+  /*color: rgb(46, 6, 1);*/
+  color: rgb(223, 99, 99);
+  font-family: 'Open Sans', sans-serif;
+   
+}
+
+.site-title {
+  /*border-right:1px solid rgb(255, 255, 255);*/
+  align-items: center;
+  border-right: 1.5px solid rgb(255, 255, 255);
+  font-size: 5em;
+  font-style: oblique;
+  font-weight: bolder;
+  height: auto; 
+  padding: 15px;
+  text-align: right;
+  width: 500px;
+  vertical-align: center;
+}
+
+.site-subtitle {
+  align-items: center;
+  font-size: 2.3em;
+  font-style: italic;
+  font-weight: 800;
+  height: auto; 
+  line-height: 1.5em;
+  padding: 45px;
+  text-align: left;
+  width: 400px;
+}
+
+@media (max-width: 800px){
+  .site-title{
+    font-size: 3em;
+  }
+}
+
+.hello{
+  background-color: rgb(221, 210, 210);
+  height: 20vh;
+  
+}
+
+.hello .img-hello{
+  border-radius: 50%;
+  height: 160px;/*180px;*/
+  object-fit: cover;
+  padding: 10px;
+  transition: transform 500ms;
+  width: 160px;/*220px;*/
+}
+
+.contato, 
+.portifolio{
+  font-size: 2em;
+  padding: 2em;
+  margin-bottom: 1em;
+  min-height: 90vh;
+}
+
+.portifolio{
+  background-color:rgb(223, 99, 99);;
+  color: black;
+}
+.contato{
+  min-height: 10%;
+  background-color: lightblue;
+}
+
+.contato h2, 
+.portifolio h2{
+  color: rgb(0, 0, 0);
+  /*font-family: 'Volkhov', serif;*/
+  /*font-family: 'Acme', sans-serif;*/
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+@media (max-width: 800px){
+  .contato h2, 
+  .portifolio h2{
+    font-size: 1.8em;
+  }
+}
+
+.portifolio .grid{
+  align-content: center;
+  display: grid;
+  gap: 2em;
+  justify-content: center;
+}
+
+.contato a{
+  color: rgb(223, 99, 99);
+  /*display: list-item;*/
+  font-size: 4em;
+  list-style: none;
+  /*margin-left: 40px;*/
+  padding: 20px;
+  transition: text-shadow 1s;
+  text-align: center;
+}
+
+.contato .icons{
+  text-align: center;
+  width:100%;
+  justify-content: space-around;
+  padding:20px;
+}
+
+.contato a:active,
+.contato a:hover{
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(250, 193, 215, 0.849);
+}
+
+/*It's a condicionalin CSS! In parentesis it1s added the condition. It's called filter. This selector changes the styles of screen's size dow 375px. For mobile development, they are called (screen) "breakpoints"*/
+@media(min-width: 376px){
+  .contato a{
+    font-size: 3.5em;
+    grid-template-columns: repeat(3,112px);
+    padding: 5px;
+  }
+}
+
+@media(min-width: 560px){
+  .contato a{
+    font-size: 2em;
+    grid-template-columns: repeat(3,150px);
+    padding: 5px;
+  }
+}
+
+@media(min-width: 670px){
+  .contato a{
+    grid-template-columns: repeat(3,220px);
+  }
+}
+
+@media(min-width: 800px){
+  .contato a{
+    align-content: center;
+    grid-template-columns: repeat(3,220px);
+    justify-content: space-around;
+  }
+}
+
+/*It's a condicionalin CSS! In parentesis it1s added the condition. It's called filter. This selector changes the styles of screen's size dow 375px. For mobile development, they are called (screen) "breakpoints"*/
+@media(min-width: 376px){
+  .portifolio .grid{
+    grid-template-columns: repeat(2,150px);
+  }
+}
+
+@media(min-width: 560px){
+  .portifolio .grid{
+    grid-template-columns: repeat(3,150px);
+  }
+}
+
+@media(min-width: 670px){
+  .portifolio .grid{
+    grid-template-columns: repeat(3,220px);
+  }
+}
+
+@media(min-width: 800px){
+  .portifolio .grid{
+    align-content: center;
+    grid-template-columns: repeat(3,220px);
+    justify-content: space-around;
+  }
+}
+
+.portifolio figure{
+  border-radius: 5rem;
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.img-portfolio{
+  border-radius: 20%;
+  height: 180px;/*180px;*/
+  object-fit: cover;
+  width: 220px;/*220px;*/
+  transition: transform 500ms;
+}
+
+.img-portfolio:hover{
+  transform: scale(1.5);
+}
+
+@media(min-width: 376px){
+  .img-portfolio{
+    height: 117px;
+    width: 143px;
+}
+
+@media(min-width: 560px){
+  .img-portfolio{
+    height: 117px;
+    width: 143px;
+}
+
+@media(min-width: 800px){
+  .img-portfolio{
+    height: 180px; /*180px;*/
+    width: 220px;/*220px;*/
+    object-fit: cover;
+    justify-content: space-around;
+}
+
+@media(min-width: 1500px){
+  .img-portfolio{
+    height: 258px; /*180px;*/
+    width: 318px;/*220px;*/
+    justify-content: space-around;
 }
