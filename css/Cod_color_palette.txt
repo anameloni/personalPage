@@ -1,0 +1,24 @@
+COLOR_PALETTE_BED
+
+1-Dark blue: #00202f
+2-Medium blue: #034b63
+3-Medium pink: #c3999b
+4-Light pink: #dfbeb9
+5-Brown: #7d5440
+
+COLOR_PALETTE_PINKSOFA
+1-Royal blue: #324162
+2-Dark blue: #094150
+3-Medium blue: #19516c
+4-Light blue: #bec7cc
+5-Medium pink: #ca94a1
+6-Light pink: #e3c2c9
+
+COLOR_PALETTE_UDES
+1-Royal blue: #324162
+2-Dark blue: #094150
+3-Medium blue: #19516c
+4-Light blue: #bec7cc
+5-Medium pink: #ca94a1
+6-Light pink: #e3c2c9
+7-Brown: #7d5440

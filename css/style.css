@@ -7,36 +7,75 @@
 
 /* body defines everytihng is on users site area*/
 body{
-  background-image: url('../Dark_img/dar_carbon.jpg');
-  background-position: center;
-  /*background-repeat: no-repeat;*/
-  background-size: 100%;
   color: rgb(223, 99, 99);
+  display: block;
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
-  transform: translateY(30px);
+  min-height: 100%;
 }
 
+.background {
+  background-image: url('../images/laranja0.png');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid white;
+  filter: blur(3px);
+  position: absolute;
+  width: 100%;
+  min-height: 72vh;
+  -webkit-filter: blur(7px);
+}
+
+.foreground {
+  backdrop-filter: blur(0.8);
+} /* No .wrapper needed! */
+
 header{
-  height: 77vh;
-  display:flex;
-  justify-content: center;
   align-items: center;
+  /*background-color: rgba(0, 0, 0, 0.2);*/
+  display: flex;
+  height: 72vh;
+  justify-content: center;
+  width: auto;
 }
 
 /*To call an elent whitch has a class, we use "."+<class name>*/
 /*All elements of this class is afected by this scope*/
 .menu{
-  background-color: rgba(20, 20, 20, 0.678);
-  position: fixed;
-  width: 50%;
-  top:0;
+  background-color:#aa55ffe7;
+  /*border: 2px solid white;*/
+  display: grid;
+  grid-template-columns:85px 10fr;
+  grid-template-rows: 100%;
+  font-size: 14px;
+  /*left: 0px;*/
+  min-height: 50px;
+  overflow: hidden;
+  position: absolute; /* Set the menu to fixed position */
+  top: 80px; /* Position the menu at the top of the page */
+  width: 80%;
+  /*Defines overlap*/
+  z-index: 20;
 }
 
 /*This comand changes all the <ul>'s content */
-.menu ul{
-  display: flex; /*comand to make the text be horizontaly aligned*/
-  justify-content: space-around; /*This comand centralize de spaces between the text, and it only works together with display*/
+.menu .ulItensMenu{
+  background-color: white;
+  color: #aa55ff;
+  display:inline-flex; /*comand to make the text be horizontaly aligned*/ 
+  justify-content:flex-end; /*This comand centralize de spaces between the text, and it only works together with display*/
+  
+}
+
+.menu .home{
+  left:10px;
+}
+
+.menu .itensMenu{
+  display: flex;
+  padding: 20px;
+  text-align: right; 
 }
 
 /*This comand changes all the <li> inside elemenst which has the class menu, taking off the "." after lists*/
@@ -44,76 +83,102 @@ header{
   list-style: none;
 }
 
-/*This comand will change de menu topics*/
-.menu a{
-  display: block;
-  padding: 10px 10px;
-  transition: background-color 1s, color 1s ;
-}
-
-.menu a:active,
-.menu a:hover{
-  background-color: rgb(223, 99, 99);
-  color: black;  
-}
-/*a defines the links*/
-a{
-  /*color: rgb(206, 60, 60);*/
-  color: rgb(223, 99, 99);
-  font-size: 1.5em;
+/*This comand will change the "A" menu icon (on the left)*/
+.home a{
+  /*color: #dfbeb9; */
+  /*color: #277196;*/
+  /*color: #00bbd3;cyan claro*/
+  background-color:#aa55ff;
+  color: white;
+  display: block; 
+  font-size: 2.5em;
+  min-height: 50px;
+  text-align: center;
   text-decoration: none; /*This comand take the underline (and other text formats) off the text*/
+  padding: 10px 20px;
+  transition: background-color 1s, color 1s;
+  /*-webkit-text-stroke: 1px #050505  /* width and color */
 }
 
-/*Pseudoclass: CSS declares it and the developer uses. Hover makes change when the mouse pass on it.*/
-a:hover{
-  text-decoration: underline; /*This comand underline the <a> content when mouse pass on it*/
-}
+/*This comand will change the right menu topics*/
+.itensMenu a{
+  /*color: #dfbeb9; */
+  /*color: #277196;*/
+  /*color: #00bbd3;cyan claro*/
 
-.title{
-  border: 20px dashed rgb(255, 255, 255);
-  display: grid;
-  height: 300px;
-  grid-template-columns:1fr 1fr;
-  grid-template-rows: auto;
-
-
-  transform: scale(0.2) translateY(30px);
+  display: inline; 
+  font-family: 'Alegreya', serif;
+  font-size: 1.5em;
+  font-weight: bolder;
+  min-height: 50px;
+  text-decoration: none; /*This comand take the underline (and other text formats) off the text*/
+  padding: 10px 20px;
+  transition: background-color 1s, color 1s;
   
+  /*-webkit-text-stroke: 1px #050505  /* width and color */
+}
+
+.home a:active,
+.home a:hover {
+  /*background-color: #00bbd3;*/
+  color: black;
+}
+
+.itensMenu a:active,
+.itensMenu a:hover {
+  /*background-color: #00bbd3;*/
+  color: #00bbd3;
 }
 
 /*Change the title and subtitle*/
-.site-subtitle,
-.site-title{
-  /*color: rgb(46, 6, 1);*/
-  color: rgb(223, 99, 99);
-  font-family: 'Open Sans', sans-serif;
-   
+.titles{
+  align-items: center;
+  /*background-color: rgba(139, 139, 139, 0.26);*/
+  /*border: 20px none #000000;*/
+  display: grid;
+  font-family: 'Oswald', sans-serif;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows: 100%;
+  height: initial;
+  padding: 15px;
+  text-align: center; 
+  /*Defines overlap*/
+  z-index: 2;
+  vertical-align: baseline; 
 }
 
 .site-title {
-  /*border-right:1px solid rgb(255, 255, 255);*/
-  align-items: center;
-  border-right: 1.5px solid rgb(255, 255, 255);
-  font-size: 5em;
+  background-color: #00bbd3;/*#aa55ff;*/  
+ /*border between title and sub-title*/
+  border: 2.5px solid #00202f;
+  color:white;/*#5500ff;*/
+  /*color: #00bbd3; cyan*/
+  /*color: #01273b;DarkBlue*/
+  /*color:#31708f;MediumBlue*/
+  /*font-family: 'Tinos', serif;*/
+  /*font-family: 'Alegreya', serif;*/
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
   font-style: oblique;
   font-weight: bolder;
-  height: auto; 
+  line-height: 50px;
   padding: 15px;
   text-align: right;
-  width: 500px;
-  vertical-align: center;
+  width: 300px;
+ /*-webkit-text-stroke: 3px #000000;  /* width and color */
 }
 
 .site-subtitle {
-  align-items: center;
-  font-size: 2.3em;
-  font-style: italic;
+  color: black;/*#00bbd3;/*#fcfcfc;*/
+  /*font-family: 'Patua One', cursive;*/
+  font-size: 2.2em;
+  /*font-style: italic;*/
   font-weight: 800;
   height: auto; 
-  line-height: 1.5em;
-  padding: 45px;
+  padding: 15px;
   text-align: left;
-  width: 400px;
+  width: 250px;
+  /*-webkit-text-stroke: 1.5px #094150; /* width and color */
 }
 
 @media (max-width: 800px){
@@ -123,88 +188,158 @@ a:hover{
 }
 
 .hello{
-  background-color: rgb(221, 210, 210);
-  height: 20vh;
-  
+  align-items: center;
+  background-color: #aa55ff;/*white;*/
+  border: 2px solid #aa55ff;
+  display: flex;
+  justify-content: center;
+  height: 28vh;
+  text-align: center;
+}
+
+.hello .hello-content{
+  display: inline-flex;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  margin: 20px;
+  vertical-align: center; 
+  width: auto;
+}
+
+.hello .grid-img{
+  text-align: right;
+  width: auto;
 }
 
 .hello .img-hello{
   border-radius: 50%;
-  height: 160px;/*180px;*/
+  height: 220px;/*180px;*/
   object-fit: cover;
   padding: 10px;
+  text-align: right;
   transition: transform 500ms;
-  width: 160px;/*220px;*/
+  width: 220px;/*220px;*/
 }
 
-.contato, 
+.hello .grid-text{
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  padding: 10px;
+  width: 800px;
+  text-align: left;
+}
+
+.hello-title{
+  color: white;/*#00bbd3;*/
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hello-about{
+  color: #ffff7f;/*#aa00ff;*/
+  font-size: 1.5em;
+}
+
 .portifolio{
+  /*background-color:rgb(223, 99, 99);*/
+  background-color:white;/*#00bbd3;*/
+  color: #00bbd3;/*white;*/
+  font-family: 'Alegreya', serif;
   font-size: 2em;
-  padding: 2em;
   margin-bottom: 1em;
-  min-height: 90vh;
+  min-height: 45vh;
+  padding: 2em;
 }
 
-.portifolio{
-  background-color:rgb(223, 99, 99);;
-  color: black;
-}
-.contato{
-  min-height: 10%;
-  background-color: lightblue;
-}
-
-.contato h2, 
 .portifolio h2{
-  color: rgb(0, 0, 0);
+  /*color: #00bbd3;*/
   /*font-family: 'Volkhov', serif;*/
   /*font-family: 'Acme', sans-serif;*/
-  font-family: 'Open Sans', sans-serif;
-  font-size: 2.5em;
+  font-size: 70px;
   margin-bottom: 1em;
-}
-
-@media (max-width: 800px){
-  .contato h2, 
-  .portifolio h2{
-    font-size: 1.8em;
-  }
+  text-align: center;
+  font-weight: 200;
 }
 
 .portifolio .grid{
   align-content: center;
   display: grid;
-  gap: 2em;
+  gap: 2px;
   justify-content: center;
 }
 
-.contato a{
-  color: rgb(223, 99, 99);
-  /*display: list-item;*/
-  font-size: 4em;
-  list-style: none;
-  /*margin-left: 40px;*/
-  padding: 20px;
-  transition: text-shadow 1s;
+.portifolio figure{
+  border-radius: 2rem;
+  font-size: 1.25em;
   text-align: center;
 }
 
-.contato .icons{
+.img-portfolio{
+  /*border-radius: 20%;*/
+  height: 270px;/*180px;*/
+  object-fit: cover;
+  width: 400px;/*220px;*/
+  transition: transform 500ms;
+}
+
+.img-portfolio:hover{
+  transform: scale(1.1);
+}
+
+.contact{
+  background-color: #00bbd3;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  padding: 2em;
+}
+
+.contact h2{
+  color: white;
+  font-family: 'Alegreya', serif;
+  font-size: 100px;
+  font-weight: 200;
+  text-align: center;
+  transition: transform 500ms;
+}
+
+.contact h2:hover{
+  transform: scale(1.5);
+}
+
+.contact a{
+  color:black;
+  /*display: list-item;*/
+  font-size: 1.5em;
+  list-style: none;
+  /*margin-left: 40px;*/
+  transition: text-shadow 1s;
+  text-align: center;
+  text-decoration: none;
+}
+
+.contact .icons{
   text-align: center;
   width:100%;
   justify-content: space-around;
   padding:20px;
 }
 
-.contato a:active,
-.contato a:hover{
-  text-decoration: none;
-  text-shadow: 0px 0px 10px rgba(250, 193, 215, 0.849);
+.contact a:active,
+.contact a:hover{
+  color:white;
+  text-shadow: 0px 0px 20px white;
 }
 
 /*It's a condicionalin CSS! In parentesis it1s added the condition. It's called filter. This selector changes the styles of screen's size dow 375px. For mobile development, they are called (screen) "breakpoints"*/
+@media (max-width: 800px){
+  .contact h2, 
+  .portifolio h2{
+    font-size: 1.8em;
+  }
+}
+
 @media(min-width: 376px){
-  .contato a{
+  .contact a{
     font-size: 3.5em;
     grid-template-columns: repeat(3,112px);
     padding: 5px;
@@ -212,7 +347,7 @@ a:hover{
 }
 
 @media(min-width: 560px){
-  .contato a{
+  .contact a{
     font-size: 2em;
     grid-template-columns: repeat(3,150px);
     padding: 5px;
@@ -220,13 +355,13 @@ a:hover{
 }
 
 @media(min-width: 670px){
-  .contato a{
+  .contact a{
     grid-template-columns: repeat(3,220px);
   }
 }
 
 @media(min-width: 800px){
-  .contato a{
+  .contact a{
     align-content: center;
     grid-template-columns: repeat(3,220px);
     justify-content: space-around;
@@ -255,27 +390,9 @@ a:hover{
 @media(min-width: 800px){
   .portifolio .grid{
     align-content: center;
-    grid-template-columns: repeat(3,220px);
+    grid-template-columns: repeat(3,450px);
     justify-content: space-around;
   }
-}
-
-.portifolio figure{
-  border-radius: 5rem;
-  font-size: 1.25em;
-  text-align: center;
-}
-
-.img-portfolio{
-  border-radius: 20%;
-  height: 180px;/*180px;*/
-  object-fit: cover;
-  width: 220px;/*220px;*/
-  transition: transform 500ms;
-}
-
-.img-portfolio:hover{
-  transform: scale(1.5);
 }
 
 @media(min-width: 376px){
@@ -300,7 +417,7 @@ a:hover{
 
 @media(min-width: 1500px){
   .img-portfolio{
-    height: 258px; /*180px;*/
-    width: 318px;/*220px;*/
+    height: 320px; /*180px;*/
+    width: 450px;/*220px;*/
     justify-content: space-around;
 }
